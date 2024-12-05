@@ -5,7 +5,7 @@ import java.util.Random;
 public class DataGenerator {
 
     // Generiert ein Array mit zufälligen Werten
-    public static int[] generateDataArray(int size) {
+    public static int[] generateDataArrayNoRange(int size) {
         Random random = new Random();
         int[] dataArray = new int[size];
         for (int i = 0; i < size; i++) {
@@ -15,7 +15,7 @@ public class DataGenerator {
     }
 
     // Generiert ein Array mit zufälligen Werten innerhalb eines Bereich
-    public static int[] generateDataArray(int size, int min, int max) {
+    public static int[] generateDataArrayYesRange(int size, int min, int max) {
         Random random = new Random();
         int[] dataArray = new int[size];
         for (int i = 0; i < size; i++) {
@@ -30,5 +30,10 @@ public class DataGenerator {
             System.out.print(value + " ");
         }
         System.out.println();
+    }
+
+    public static int[] printArray(int i, int j, int k) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'printArray'");
     }
 }
