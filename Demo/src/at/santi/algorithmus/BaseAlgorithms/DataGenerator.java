@@ -24,16 +24,4 @@ public class DataGenerator {
         return dataArray;
     }
 
-    // Gibt die Werte des Arrays in einer Zeile auf der Konsole aus
-    public static void printArray(int[] data) {
-        for (int value : data) {
-            System.out.print(value + " ");
-        }
-        System.out.println();
-    }
-
-    public static int[] printArray(int i, int j, int k) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'printArray'");
-    }
 }

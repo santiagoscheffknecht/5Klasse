@@ -3,30 +3,25 @@ package at.santi.algorithmus.BaseAlgorithms;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+
 public class DataGeneratorTest {
 
     @Test
     public void testGenerateDataArrayWithoutRange() {
-        int[] result = DataGenerator.generateDataArrayNoRange(10);
-        assertEquals(10, result.length, "Arraygröße sollte 10 sein");
+        int[] result = DataGenerator.generateDataArrayNoRange(3);
+        assertEquals(3, result.length, "");
+        System.out.println(Arrays.toString(result));
     }
 
     @Test
     public void testGenerateDataArrayWithRange() {
-        int[] result = DataGenerator.generateDataArrayYesRange(10, -50, 50);
-        assertEquals(10, result.length, "Arraygröße sollte 10 sein");
+        int[] result = DataGenerator.generateDataArrayYesRange(3, 0, 187);
+        assertEquals(3, result.length, "");
         for (int value : result) {
-            assertTrue(value >= -50 && value <= 50, "Wert liegt nicht im erlaubten Bereich [-50, 50]");
+            assertTrue(value >= 0 && value <= 187, "");
         }
-    }
-
-    @Test
-    public void testPrintArray() {
-        // Da die printArray-Methode nichts zurückgibt, können wir einfach prüfen,
-        // ob keine Fehler auftreten.
-        int[] result = DataGenerator.printArray(5, 1, 100);
-        DataGenerator.printArray(result);
-        assertNotNull(result, "Das Array sollte nicht null sein");
+        System.out.println(Arrays.toString(result));
     }
 
 }
